@@ -11,9 +11,10 @@
       </a>
  
       <!-- Be sure to leave the brand out there if you want it shown -->
-      <a class="brand" href="/">MY Cool Site</a>
+     <!--<a class="brand" href="/">MY Cool Site</a> will do same thing as next line -->
+     <%= link_to "MY Cool Site", root_path, class: "brand" %>
  
-      <!-- Everything you want hidden at 940px or less, place within here -->
+      <!-- Everything you w ant hidden at 940px or less, place within here -->
       <div class="nav-collapse">
       	<ul class="nav">
       <li>	<%=link_to "Home", root_path %></li>
@@ -21,7 +22,13 @@
 	</ul>
 
       	<ul class="nav pull-right">
-      <li><%=link_to "Login", '#' %></li>
+      		<% if user_signed_in? %>
+      <li><%=link_to "Edit Profile", edit_user_registration_path  %></li>
+
+      <li><%=link_to "Logout",destroy_user_session_path , method: :delete %></li>
+      <% else%>
+      <li><%=link_to "Login", new_user_session_path %></li>
+<%end%>
 		
 	</ul>
         <!-- .nav, .navbar-search, .navbar-form, etc -->
