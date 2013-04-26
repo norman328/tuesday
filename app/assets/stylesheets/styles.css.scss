@@ -2,9 +2,9 @@
 $baseFontFamily: Oxygen;
 @import url(http://fonts.googleapis.com/css?family=Oxygen);*/
 
-/*$navbarBackgroundHighlight: gray;
-$navbarBackground: lightblue;
-$btnPrimaryBackground: blue;*/
+$navbarBackgroundHighlight: white;
+$navbarBackground: gray;
+$btnPrimaryBackground: purple;
 
 
 @import 'bootstrap';
@@ -13,8 +13,13 @@ body{
 }
 @import 'bootstrap-responsive';
 
-.footer { margin-top: 50px; 
-		color:$grayLight;
+.navbar-inner{
+@include box-shadow(none !important); border: 0;
+}
+
+.footer {
+		 margin-top: 50px; 
+		color: $grayLight;
 		a{ color: $gray; }
 
 }
