@@ -17,5 +17,10 @@ doc/
 *.swp
 *~
 .project
-
 .idea
+
+# Ignore Paperclip uploaded files
+/public/systems
+
+#Ignore sampleimages
+/sampleimages
